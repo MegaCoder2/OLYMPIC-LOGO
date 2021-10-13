@@ -1,31 +1,38 @@
 var Canvas = document.getElementById("Canvas");
 var cdx = Canvas.getContext("2d")
-var color = "blue"
+
 cdx.beginPath();
-cdx.strokeStyle = color
+cdx.strokeStyle = "grey"
 cdx.lineWidth = 2
-cdx.arc(200, 200, 40, 0, 2*Math.PI)
+cdx.rect(150, 130, 430, 200)
 cdx.stroke()
 
-Canvas.addEventListener("mousedown", click)
-function click(e)
-{
-color = document.getElementById("Color").value
-mousex = e.clientX - Canvas.offsetLeft
-mousey = e.clientY - Canvas.offsetTop
-console.log(mousex)
-console.log(mousey)
-circle(mousex, mousey)
-}
-function circle(mousex, mousey)
-{
-cdx.beginPath()
-cdx.strokeStyle = color
-cdx.lineWidth = 2
-cdx.arc(mousex, mousey, 40, 0, 2*Math.PI)
+cdx.beginPath();
+cdx.strokeStyle = "blue"
+cdx.lineWidth = 5
+cdx.arc(250, 210, 40, 0, 2*Math.PI)
 cdx.stroke()
-}
-function clearcanvas()
-{
-cdx.clearRect(0, 0, Canvas.width, Canvas.height)
-}
+
+cdx.beginPath();
+cdx.strokeStyle = "black"
+cdx.lineWidth = 5
+cdx.arc(350, 210, 40, 0, 2*Math.PI)
+cdx.stroke()
+
+cdx.beginPath();
+cdx.strokeStyle = "red"
+cdx.lineWidth = 5
+cdx.arc(450, 210, 40, 0, 2*Math.PI)
+cdx.stroke()
+
+cdx.beginPath();
+cdx.strokeStyle = "orange"
+cdx.lineWidth = 5
+cdx.arc(300, 250, 40, 0, 2*Math.PI)
+cdx.stroke()
+
+cdx.beginPath();
+cdx.strokeStyle = "green"
+cdx.lineWidth = 5
+cdx.arc(400, 250, 40, 0, 2*Math.PI)
+cdx.stroke()
